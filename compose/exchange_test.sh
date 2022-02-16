@@ -39,7 +39,7 @@ echo '[{"addr":"'$CHRISTEL'","key":"'$CHRISTEL'","max_sell":"200","min_buy":"20"
 # run gossip
 anoma node gossip --rpc "127.0.0.1:26660"
 
-anoma node matchmaker --matchmaker-path wasm/mm_token_exch.wasm --tx-code-path wasm/tx_from_intent.wasm --ledger-address "127.0.0.1:26657" --source mm-1 --signing-key mm-1
+anoma node matchmaker --matchmaker-path libmm_token_exch.so --tx-code-path tx_from_intent.wasm --ledger-address "127.0.0.1:26657" --source my-matchmaker --signing-key my-matchmaker
 
 anoma client subscribe-topic --node "http://127.0.0.1:26660" --topic "asset_v1"
 
