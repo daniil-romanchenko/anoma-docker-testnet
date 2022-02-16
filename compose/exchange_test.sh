@@ -36,10 +36,7 @@ echo '[{"addr":"'$BERTHA'","key":"'$BERTHA'","max_sell":"300","min_buy":"50","ra
 
 echo '[{"addr":"'$CHRISTEL'","key":"'$CHRISTEL'","max_sell":"200","min_buy":"20","rate_min":"0.5","token_buy":"'$ETH'","token_sell":"'$XAN'"}]' > intent.C.data
 
-# run gossip
-anoma node gossip --rpc "127.0.0.1:26660"
-
-anoma node matchmaker --matchmaker-path libmm_token_exch.so --tx-code-path tx_from_intent.wasm --ledger-address "127.0.0.1:26657" --source my-matchmaker --signing-key my-matchmaker
+anoma node matchmaker --matchmaker-path libmm_token_exch.so --tx-code-path tx_from_intent.wasm --ledger-address "127.0.0.1:26657" --source my-matchmaker --signing-key my-matchmaker &
 
 anoma client subscribe-topic --node "http://127.0.0.1:26660" --topic "asset_v1"
 
@@ -47,7 +44,10 @@ anoma client intent --data-path intent.A.data --topic "asset_v1" --signing-key a
 anoma client intent --data-path intent.B.data --topic "asset_v1" --signing-key bertha --node "http://127.0.0.1:26660"
 anoma client intent --data-path intent.C.data --topic "asset_v1" --signing-key christel --node "http://127.0.0.1:26660"
 
+sleep 4
+
 anoma client balance --owner alberto-account
 anoma client balance --owner bertha-account
 anoma client balance --owner christel-account
 
+kill $!
