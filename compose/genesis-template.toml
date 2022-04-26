@@ -131,9 +131,13 @@ sha256 = "6ef0f5ab15a7ce6b7352490524378f7160d0fb3050b7295e8d7f64cf6f4ea03f"
 # General protocol parameters.
 [parameters]
 # Minimum number of blocks in an epoch.
-min_num_of_blocks = 10
 # Minimum duration of an epoch (in seconds).
-min_duration = 60
+min_num_of_blocks = 4
+min_duration = 1
+max_expected_time_per_block = 30
+vp_whitelist = []
+tx_whitelist = []
+
 
 # Proof of stake parameters.
 [pos_params]

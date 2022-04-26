@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-export ANOMA_TAG=${ANOMA_TAG:-v0.2.0}
+export ANOMA_TAG=${ANOMA_TAG:-v0.4.0}
 export ANOMA_IMAGE=${ANOMA_IMAGE:-"heliaxdev/anoma:${ANOMA_TAG}"}
 
 # network settings
@@ -16,7 +16,7 @@ PORT_P2P=26656
 
 # anoma repo: genesis/internal-testnet.toml
 GENESIS_PATH=genesis.toml
-CHAIN_PREFIX=anoma-internal-0
+CHAIN_PREFIX=anoma-internal-1.2
 
 __init-network(){
 	rm -rf ./anoma-internal*
