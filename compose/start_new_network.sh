@@ -1,4 +1,6 @@
 #/usr/bin/bash
+
+cd /home/daniil/IdeaProjects/anoma5/anoma-docker-testnet/compose
 export ANOMA_TAG=v0.4.0
 ./tasks init
 
@@ -29,7 +31,7 @@ anoma client init-account --alias my-matchmaker-account --public-key my-matchmak
 
 sleep 3
 echo 'Starting matchmaker...'
-anoma node matchmaker --matchmaker-path libmm_template.so --tx-code-path tx_from_intent.wasm --ledger-address "127.0.0.1:26657" --source my-matchmaker --signing-key my-matchmaker > logs/mmaker.log &
+anoma node matchmaker --matchmaker-path libmm_template.so --tx-code-path /home/daniil/IdeaProjects/anoma5/anoma-docker-testnet/compose/tx_template.wasm --ledger-address "127.0.0.1:26657" --source my-matchmaker --signing-key my-matchmaker > logs/mmaker.log &
 pids+=( $! )
 
 sleep 2
