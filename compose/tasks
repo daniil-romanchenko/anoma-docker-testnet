@@ -30,7 +30,7 @@ __init-network(){
 	setpath(["validator","validator-4","net_address"]; "'"$NET_VALIDATOR_4:$PORT_P2P"'")
 	' < genesis-template.toml > "$GENESIS_PATH"
 
-	docker run -it --rm \
+	docker run -i --rm \
 		--entrypoint "" \
 		-v "$PWD:/data" \
 		-w /data \
