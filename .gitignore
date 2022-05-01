@@ -24,6 +24,15 @@ compose/logs
 # Crafted data with transaction and intent payloads for testing
 *.data
 
+# Crafted data with transaction and intent payloads for testing
+compose/auction_id
+
+# Crafted data with transaction and intent payloads for testing
+compose/auction.json
+
+# Crafted data with transaction and intent payloads for testing
+compose/bid*.json
+
 # generated if using pyenv to manage different python versions
 .python-version
 
