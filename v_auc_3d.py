@@ -2,6 +2,7 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
+from matplotlib.ticker import MaxNLocator
 
 # 217 real gates + approx
 bench = [
@@ -108,7 +109,7 @@ def f(bid_bits, participants):
 
 
 # x_lim, y_lim = 32, 20
-x_lim, y_lim = 10, 10
+x_lim, y_lim = 20, 10
 # bits
 x = np.arange(1, x_lim)
 # participants
@@ -128,11 +129,12 @@ X, Y = np.meshgrid(x, y)
 # plt.style.use('dark_background')
 fig = plt.figure()
 ax = plt.axes(projection='3d')
+ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='viridis', edgecolor='none')
-ax.set_xlabel('Bits per bid')
-ax.set_ylabel('Number of Participants')
+ax.set_xlabel('Bits per bid amount')
+ax.set_ylabel('Participants')
 # ax.set_zlabel('NAND gates')
-ax.set_zlabel('Auction Circuit Evaluation Time (minutes)')
+ax.set_zlabel('Circuit Evaluation (min)')
 
 plt.savefig('circuit_eval.pdf', dpi=300)
 plt.show()

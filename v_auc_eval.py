@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 
 sns.set_theme(style="darkgrid")
 
@@ -71,8 +72,19 @@ df = {'Number Of Participants': p,
 pdf = pd.DataFrame(df)
 print(pdf)
 
-pl = sns.lineplot(x=p, y=bench_1)
+# pl = sns.lineplot(x=p, y=bench_1)
 
-pl.set(xlabel="Number of Participants", ylabel="Gate Evaluation Time (in Seconds)")
+ax = plt.figure().gca()
+ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+
+# Quadratic regression approximation
+x = np.linspace(0, 20, 1000)
+y = 0.1050 * x * x + 0.0500 * x + 0.1941
+# ax.plot(x, y)
+pl = sns.lineplot(x, y, color='red')
+
+pl = sns.scatterplot(x=p, y=bench_1)
+
+pl.set(xlabel="Participants", ylabel="Gate Evaluation (sec)")
 plt.savefig('gate_eval.pdf', dpi=300)
 plt.show()
