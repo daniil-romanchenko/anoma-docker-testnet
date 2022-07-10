@@ -1,0 +1,14 @@
+[2mJul 10 20:59:30.548[0m [32m INFO[0m anoma_apps::cli::context: Chain ID: anoma-internal-1.2.55e05dfdab8
+Response {
+    metadata: MetadataMap {
+        headers: {
+            "content-type": "application/grpc",
+            "date": "Sun, 10 Jul 2022 18:59:30 GMT",
+            "grpc-status": "0",
+        },
+    },
+    message: RpcResponse {
+        result: "Node subscribed to asset_v1",
+    },
+    extensions: Extensions,
+}

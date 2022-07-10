@@ -1,0 +1,59 @@
+[2mJul 10 20:59:28.544[0m [32m INFO[0m anoma_apps::cli::context: Chain ID: anoma-internal-1.2.55e05dfdab8
+[2mJul 10 20:59:28.547[0m [32m INFO[0m anoma_apps::node::gossip::rpc::matchmakers: Matchmaker client running at 127.0.0.1:38888
+[2mJul 10 20:59:28.548[0m [32m INFO[0m anoma_apps::node::matchmaker: Running matchmaker from /home/daniil/IdeaProjects/anoma5/anoma-docker-testnet/compose/libmm_template.so
+[2mJul 10 20:59:28.598[0m [32m INFO[0m anoma_apps::node::gossip::rpc::matchmakers: Connected to the server at 127.0.0.1:26661. The client is identified by local port: 38888
+auction with id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully added
+
+auction id: "276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2"
+
+bid with auction id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully added
+
+auction id: "276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2"
+
+bid with auction id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully added
+
+auction id: "276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2"
+
+bid with auction id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully added
+
+auction id: "276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2"
+
+bid with auction id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully added
+
+auction id: "276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2"
+
+status: exit status: 0
+Starting BIT DECRYPTION
+Overall time: 136.103(s)
+Gates evaluated: 217
+Time per gate: 0.627204(s)
+Next decryption: DONE!
+auction with id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully calculated
+
+auction id: "276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2"
+
+status: exit status: 0
+Starting BIT DECRYPTION FINALIZATION
+Reading MKlwekey: DONE!
+Finalized result: 
+110111
+Bit decrypt finaliztion: DONE!
+Result str is [49, 49, 48, 49, 49, 49]
+Bid id: 4, Bid value: 7000000
+tx data: {Transfer { source: Established: atest1v4ehgw36xfzyvs3k8yurgde5g56nvd6xgverxsf58y6nsvzxxeq5g3fsg9qngwfkx5crxd3kku48em, target: Established: atest1v4ehgw36gs6rjd69xaqnj33kxqcnv3pc8qmryd6z8yeygdjrxepygwzrg4z52dekg4rrzwz9m09dm8, token: Established: atest1v4ehgw36xdzryve5gsc52veeg5cnsv2yx5eygvp38qcrvd29xy6rys6p8yc5xvp4xfpy2v694wgwcp, amount: Amount { micro: 7000000 } }, Transfer { source: Established: atest1v4ehgw36gs6rjd69xaqnj33kxqcnv3pc8qmryd6z8yeygdjrxepygwzrg4z52dekg4rrzwz9m09dm8, target: Established: atest1v4ehgw36xfzyvs3k8yurgde5g56nvd6xgverxsf58y6nsvzxxeq5g3fsg9qngwfkx5crxd3kku48em, token: Established: atest1v4ehgw36gep5ysecxq6nyv3jg3zygv3e89qn2vp48pryxsf4xpznvve5gvmy23fs89pryvf5a6ht90, amount: Amount { micro: 10000000 } }}
+auction with id 276f6af1579f41ed688de5b3981ee8cc29a5af17128c14cef5d64e124a2a2 was successfully cleared
+
+Last committed epoch: 56
+Transaction added to mempool: Response { code: Ok, data: Data([]), log: Log("Mempool validation passed"), hash: transaction::Hash(FBC18D37357CE45AFA495C56F9971A4A7839F0E6FA0D5E1028D34783DFD8CDB8) }
+Transaction hash: "081FB47461F8CF3BD05B56F9CBEC8B280BCC2A2D96F1D3D1BA762FD7A08F9EE8"
+[2mJul 10 21:04:25.285[0m [32m INFO[0m anoma_apps::node::matchmaker: Injected transaction from matchmaker with result: Response {
+    code: Ok,
+    data: Data(
+        [],
+    ),
+    log: Log(
+        "Mempool validation passed",
+    ),
+    hash: transaction::Hash(FBC18D37357CE45AFA495C56F9971A4A7839F0E6FA0D5E1028D34783DFD8CDB8),
+}
+[2mJul 10 21:04:25.285[0m [32m INFO[0m anoma_apps::node::gossip::rpc::matchmakers: Sent msg Matched { intent_ids: {[49, 49, 57, 54, 48, 50, 56, 55, 48, 51, 55, 52, 50, 57, 55, 57, 51, 50, 54, 54], [49, 55, 54, 48, 55, 55, 55, 54, 57, 52, 50, 48, 49, 53, 57, 54, 55, 51, 52, 56], [49, 53, 53, 51, 51, 52, 55, 55, 52, 57, 50, 55, 54, 48, 54, 54, 56, 56, 49, 51], [51, 55, 56, 48, 55, 57, 52, 52, 53, 51, 50, 52, 56, 56, 53, 53, 55, 57, 49]} } to [3.R.0] 127.0.0.1:26661 with status Sent
